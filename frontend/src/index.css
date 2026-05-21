@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 body {
-  background: #020617;
-  color: white;
+  background: linear-gradient(
+    135deg,
+    #fffaf5 0%,
+    #fff1f7 45%,
+    #f7f0ff 100%
+  );
+
+  color: #3b2f4a;
   font-family: Inter, sans-serif;
 }
