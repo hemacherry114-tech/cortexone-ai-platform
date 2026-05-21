@@ -39,16 +39,16 @@ function WorkflowSection() {
     <div className="mt-10">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-2xl font-bold text-[#4b2e5e]">
             Multi-Agent Workflow
           </h2>
 
-          <p className="text-slate-400 mt-1">
+          <p className="text-purple-300 mt-1">
             Real-time orchestration of AI research agents
           </p>
         </div>
 
-        <div className="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-400 text-sm border border-emerald-500/20">
+        <div className="px-4 py-2 rounded-full bg-pink-100 text-pink-500 text-sm border border-pink-200">
           System Active
         </div>
       </div>
@@ -63,36 +63,36 @@ function WorkflowSection() {
               duration: 0.5,
               delay: index * 0.1,
             }}
-            className="relative bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 hover:-translate-y-1 transition-all duration-300"
+            className="relative bg-pink-50/80 border border-pink-200 rounded-2xl p-6 backdrop-blur-xl hover:bg-pink-100/80 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-pink-100/40"
           >
             <div className="flex items-center justify-between">
-              <div className="text-3xl text-indigo-400">
+              <div className="text-3xl text-pink-400">
                 {step.icon}
               </div>
 
               <div
                 className={`text-xs px-3 py-1 rounded-full ${
                   step.status === "Completed"
-                    ? "bg-emerald-500/20 text-emerald-400"
+                    ? "bg-emerald-100 text-emerald-500"
                     : step.status === "Running"
-                    ? "bg-yellow-500/20 text-yellow-400"
-                    : "bg-slate-500/20 text-slate-400"
+                    ? "bg-yellow-100 text-yellow-500"
+                    : "bg-purple-100 text-purple-400"
                 }`}
               >
                 {step.status}
               </div>
             </div>
 
-            <h3 className="text-lg font-semibold mt-6">
+            <h3 className="text-lg font-semibold mt-6 text-[#4b2e5e]">
               {step.title}
             </h3>
 
-            <p className="text-slate-400 text-sm mt-3 leading-relaxed">
+            <p className="text-purple-300 text-sm mt-3 leading-relaxed">
               {step.description}
             </p>
 
             {step.status === "Running" && (
-              <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-b-2xl animate-pulse" />
+              <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-pink-300 to-purple-300 rounded-b-2xl animate-pulse" />
             )}
           </motion.div>
         ))}

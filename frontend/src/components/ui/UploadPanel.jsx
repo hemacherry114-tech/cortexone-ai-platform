@@ -39,19 +39,19 @@ function UploadPanel() {
 
     <div className="mt-10 grid grid-cols-1 xl:grid-cols-2 gap-6">
 
-      <div className="bg-white/5 border border-dashed border-white/10 rounded-2xl p-10 backdrop-blur-xl">
+      <div className="bg-pink-50/80 border border-dashed border-pink-200 rounded-2xl p-10 backdrop-blur-xl shadow-lg shadow-pink-100/40">
 
         <div className="flex flex-col">
 
-          <div className="w-20 h-20 rounded-full bg-indigo-500/20 flex items-center justify-center text-4xl text-indigo-400">
+          <div className="w-20 h-20 rounded-full bg-pink-200/60 flex items-center justify-center text-4xl text-pink-400">
             <FiUploadCloud />
           </div>
 
-          <h2 className="text-2xl font-bold mt-6">
+          <h2 className="text-2xl font-bold mt-6 text-[#4b2e5e]">
             AI Research Workspace
           </h2>
 
-          <p className="text-slate-400 mt-3">
+          <p className="text-purple-300 mt-3">
             Generate enterprise-level AI reports using multi-agent workflows.
           </p>
 
@@ -60,12 +60,12 @@ function UploadPanel() {
             placeholder="Enter research topic..."
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
-            className="mt-6 bg-slate-900 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-indigo-500"
+            className="mt-6 bg-white/70 border border-pink-200 rounded-xl px-4 py-3 outline-none focus:border-pink-400 text-[#4b2e5e] placeholder:text-purple-300"
           />
 
           <button
             onClick={generateReport}
-            className="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-500"
+            className="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-pink-300 to-purple-300 text-[#4b2e5e] font-semibold shadow-md shadow-pink-200"
           >
             {
               loading
@@ -78,17 +78,17 @@ function UploadPanel() {
 
       </div>
 
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl overflow-y-auto max-h-[600px]">
+      <div className="bg-pink-50/80 border border-pink-200 rounded-2xl p-8 backdrop-blur-xl overflow-y-auto max-h-[600px] shadow-lg shadow-pink-100/40">
 
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-2xl font-bold text-[#4b2e5e]">
           Executive Report
         </h2>
 
-        <p className="text-slate-400 mt-2">
+        <p className="text-purple-300 mt-2">
           AI-generated enterprise intelligence
         </p>
 
-        <div className="mt-8 whitespace-pre-wrap text-slate-300 leading-relaxed">
+        <div className="mt-8 whitespace-pre-wrap text-[#6b4c7a] leading-relaxed">
 
           {
             report

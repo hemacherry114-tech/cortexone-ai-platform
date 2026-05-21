@@ -26,25 +26,25 @@ function AgentActivity() {
     <div className="mt-10">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-2xl font-bold text-[#4b2e5e]">
             Agent Activity Monitor
           </h2>
 
-          <p className="text-slate-400 mt-1">
+          <p className="text-purple-300 mt-1">
             Real-time operational status of AI agents
           </p>
         </div>
 
-        <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+        <div className="w-3 h-3 rounded-full bg-pink-400 animate-pulse" />
       </div>
 
-      <div className="bg-white/5 border border-white/10 rounded-2xl backdrop-blur-xl overflow-hidden">
+      <div className="bg-pink-50/80 border border-pink-200 rounded-2xl backdrop-blur-xl overflow-hidden shadow-lg shadow-pink-100/40">
         {agents.map((agent, index) => (
           <div
             key={agent.name}
             className={`flex items-center justify-between p-6 ${
               index !== agents.length - 1
-                ? "border-b border-white/10"
+                ? "border-b border-pink-100"
                 : ""
             }`}
           >
@@ -54,17 +54,17 @@ function AgentActivity() {
                   agent.status === "Completed"
                     ? "bg-emerald-400"
                     : agent.status === "Running"
-                    ? "bg-yellow-400 animate-pulse"
-                    : "bg-slate-500"
+                    ? "bg-pink-400 animate-pulse"
+                    : "bg-purple-200"
                 }`}
               />
 
               <div>
-                <h3 className="font-semibold">
+                <h3 className="font-semibold text-[#4b2e5e]">
                   {agent.name}
                 </h3>
 
-                <p className="text-sm text-slate-400 mt-1">
+                <p className="text-sm text-purple-300 mt-1">
                   {agent.activity}
                 </p>
               </div>
@@ -73,10 +73,10 @@ function AgentActivity() {
             <div
               className={`text-sm px-4 py-2 rounded-full ${
                 agent.status === "Completed"
-                  ? "bg-emerald-500/20 text-emerald-400"
+                  ? "bg-emerald-100 text-emerald-500"
                   : agent.status === "Running"
-                  ? "bg-yellow-500/20 text-yellow-400"
-                  : "bg-slate-500/20 text-slate-400"
+                  ? "bg-pink-100 text-pink-500"
+                  : "bg-purple-100 text-purple-400"
               }`}
             >
               {agent.status}

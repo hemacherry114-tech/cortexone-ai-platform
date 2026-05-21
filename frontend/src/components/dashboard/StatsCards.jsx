@@ -42,20 +42,19 @@ function StatsCards() {
             duration: 0.5,
             delay: index * 0.1,
           }}
-          className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-xl hover:border-indigo-500/30 hover:-translate-y-1 transition-all duration-300"
-        >
+            className="bg-pink-50/80 border border-pink-200 rounded-2xl p-6 backdrop-blur-xl hover:bg-pink-100/80 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-pink-100/40"        >
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-slate-400 text-sm">
+              <p className="text-purple-300 text-sm">
                 {item.title}
               </p>
 
-              <h2 className="text-3xl font-bold mt-3">
+              <h2 className="text-3xl font-bold mt-3 text-[#4b2e5e]">
                 {item.value}
               </h2>
             </div>
 
-            <div className="text-3xl text-indigo-400">
+            <div className="text-3xl text-pink-400">
               {item.icon}
             </div>
           </div>
